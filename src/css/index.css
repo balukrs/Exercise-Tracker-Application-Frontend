@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  a {
+    cursor: pointer;
+  }
+}
+
+@layer utilities {
+  .under-decoration {
+    text-decoration: underline;
+    text-decoration-color: #04d9b2;
+    text-underline-position: under;
+  }
+  .form-height {
+    height: 400px;
+  }
+  .tablehead {
+    border: 1px solid #ddd;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+  .tablerows {
+    border-bottom: 1px solid #ddd;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+  }
+}
