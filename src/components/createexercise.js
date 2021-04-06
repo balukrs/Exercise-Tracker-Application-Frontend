@@ -56,7 +56,7 @@ const CreateExercise = () => {
 
   const exerciseSubmit = async (data) =>
     await Axios.post(
-      "https://exercise-app-bcknd.herokuapp.com/users/exercises/add",
+      "https://exercise-app-bcknd.herokuapp.com/exercises/add",
       data
     );
 

@@ -39,7 +39,7 @@ const Editexercise = () => {
 
   const userFetch = async () => {
     const response = await Axios.get(
-      `http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/exercises/${userid}`
+      `https://exercise-app-bcknd.herokuapp.com/exercises/${userid}`
     );
     setSelecteduser(response.data.username);
     setDescript(response.data.description);
@@ -49,7 +49,7 @@ const Editexercise = () => {
 
   const exerciseSubmit = async (data) =>
     await Axios.post(
-      `https://exercise-app-bcknd.herokuapp.com/users/exercises/update/${userid}`,
+      `https://exercise-app-bcknd.herokuapp.com/exercises/update/${userid}`,
       data
     );
 

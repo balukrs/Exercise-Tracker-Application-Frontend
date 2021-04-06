@@ -13,14 +13,14 @@ const Exerciselist = () => {
 
   const dataFetch = async () => {
     const response = await Axios.get(
-      "https://exercise-app-bcknd.herokuapp.com/users/exercises"
+      "https://exercise-app-bcknd.herokuapp.com/exercises"
     );
     setExerdb(response.data);
   };
   const deleteExercise = (id) => {
     const del = async () =>
       await Axios.delete(
-        `https://exercise-app-bcknd.herokuapp.com/users/exercises/${id}`
+        `https://exercise-app-bcknd.herokuapp.com/exercises/${id}`
       );
     del();
     const filtered = exerdb.filter((item) => item._id !== id);
