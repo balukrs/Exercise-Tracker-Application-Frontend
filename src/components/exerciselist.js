@@ -12,12 +12,16 @@ const Exerciselist = () => {
   // Async func
 
   const dataFetch = async () => {
-    const response = await Axios.get("http://localhost:5000/exercises");
+    const response = await Axios.get(
+      "http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/exercises"
+    );
     setExerdb(response.data);
   };
   const deleteExercise = (id) => {
     const del = async () =>
-      await Axios.delete(`http://localhost:5000/exercises/${id}`);
+      await Axios.delete(
+        `http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/exercises/${id}`
+      );
     del();
     const filtered = exerdb.filter((item) => item._id !== id);
     setExerdb(filtered);

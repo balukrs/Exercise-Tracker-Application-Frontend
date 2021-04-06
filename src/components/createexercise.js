@@ -48,17 +48,17 @@ const CreateExercise = () => {
   // Async Functions
 
   const userFetch = async () => {
-    const response = await Axios.get("http://localhost:5000/users");
+    const response = await Axios.get(
+      "http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/users"
+    );
     setUserlist(response.data);
   };
 
-  const exerciseSubmit = async (data) => {
-    const response = await Axios.post(
-      "http://localhost:5000/exercises/add",
+  const exerciseSubmit = async (data) =>
+    await Axios.post(
+      "http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/exercises/add",
       data
     );
-    console.log(response);
-  };
 
   // Submit functions
 

@@ -26,10 +26,11 @@ const Createuser = () => {
   const classes = useStyles();
 
   // Async Fyunctions
-  const userSubmit = async (data) => {
-    const response = await Axios.post("http://localhost:5000/users/add", data);
-    console.log(response);
-  };
+  const userSubmit = async (data) =>
+    await Axios.post(
+      "http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/users/add",
+      data
+    );
 
   // Submit Functions
 
@@ -38,7 +39,7 @@ const Createuser = () => {
     const newuser = { username: user };
     userSubmit(newuser);
     setUser("");
-    // window.location = "/";
+    window.location = "/";
   };
 
   return (
