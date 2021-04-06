@@ -13,14 +13,14 @@ const Exerciselist = () => {
 
   const dataFetch = async () => {
     const response = await Axios.get(
-      "http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/exercises"
+      "https://exercise-app-bcknd.herokuapp.com/users/exercises"
     );
     setExerdb(response.data);
   };
   const deleteExercise = (id) => {
     const del = async () =>
       await Axios.delete(
-        `http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/exercises/${id}`
+        `https://exercise-app-bcknd.herokuapp.com/users/exercises/${id}`
       );
     del();
     const filtered = exerdb.filter((item) => item._id !== id);

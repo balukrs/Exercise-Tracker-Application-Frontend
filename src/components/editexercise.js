@@ -49,7 +49,7 @@ const Editexercise = () => {
 
   const exerciseSubmit = async (data) =>
     await Axios.post(
-      `http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/exercises/update/${userid}`,
+      `https://exercise-app-bcknd.herokuapp.com/users/exercises/update/${userid}`,
       data
     );
 

@@ -49,14 +49,14 @@ const CreateExercise = () => {
 
   const userFetch = async () => {
     const response = await Axios.get(
-      "http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/users"
+      "https://exercise-app-bcknd.herokuapp.com/users/users"
     );
     setUserlist(response.data);
   };
 
   const exerciseSubmit = async (data) =>
     await Axios.post(
-      "http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/exercises/add",
+      "https://exercise-app-bcknd.herokuapp.com/users/exercises/add",
       data
     );
 

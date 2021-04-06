@@ -28,7 +28,7 @@ const Createuser = () => {
   // Async Fyunctions
   const userSubmit = async (data) =>
     await Axios.post(
-      "http://exercisetrackerbackend-env.eba-demvgn28.us-east-2.elasticbeanstalk.com/users/add",
+      "https://exercise-app-bcknd.herokuapp.com/users/users/add",
       data
     );
 
