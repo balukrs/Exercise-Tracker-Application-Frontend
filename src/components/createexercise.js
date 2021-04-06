@@ -49,7 +49,7 @@ const CreateExercise = () => {
 
   const userFetch = async () => {
     const response = await Axios.get(
-      "https://exercise-app-bcknd.herokuapp.com/users/users"
+      "https://exercise-app-bcknd.herokuapp.com/users"
     );
     setUserlist(response.data);
   };

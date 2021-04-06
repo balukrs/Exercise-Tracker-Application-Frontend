@@ -28,7 +28,7 @@ const Createuser = () => {
   // Async Fyunctions
   const userSubmit = async (data) =>
     await Axios.post(
-      "https://exercise-app-bcknd.herokuapp.com/users/users/add",
+      "https://exercise-app-bcknd.herokuapp.com/users/add",
       data
     );
 
